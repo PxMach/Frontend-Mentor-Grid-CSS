@@ -7,11 +7,16 @@
 body {
    background-color: hsl(0, 0%, 81%);
    display: grid;
-   grid-template-columns: repeat(4, 1fr);
+   /* grid-template-columns: repeat(4, 1fr); */
    gap: 10px;
+   padding-block: 2rem;
+   width: min(95%, 70rem);
+   margin-inline: auto;
 }
-/* .col-span {
+/* .grid-col-span {
+   grid-column: span 2;
 } */
+
 /* Section */
 section {
    border-radius: 10px;
@@ -47,8 +52,11 @@ section div {
 
 /* Section Daniel Clifford */
 .section-dani {
-   color: white;
    background-color: hsl(263, 55%, 52%);
+   color: white;
+   background-image: url("./images/bg-pattern-quotation.svg");
+   background-repeat: no-repeat;
+   background-position: top right;
 }
 
 /* Section Jonathan Walters*/
@@ -100,31 +108,22 @@ section div {
 .section-kira .job p:nth-child(2) {
    color: hsl(217, 19%, 35%);
 }
+/* .section-kira {
+   grid-column-start: 4;
+   grid-row-start: 1;
+   grid-row-end: 3;
+} */
 
-/* .section-dani div {
-   margin: 20px 20px 20px;
-} */
-/* .profile-dani {
-   display: flex;
-   align-items: center;
-} */
-/* .profile-dani img {
-   width: 40px;
-   border-radius: 50%;
-} */
-/* .profile-dani p {
-   margin-left: 10px;
-} */
-/* .profile-dani span {
-   color: hsl(0, 0%, 81%);
-} */
-/* .dani-job p {
-   margin-bottom: 20px;
-} */
-/* .dani-job p:nth-child(1) {
-   color: hsl(0, 0%, 100%);
-   font-size: 20px;
-} */
-/* .dani-job p:nth-child(2) {
-   color: hsl(0, 0%, 81%);
-} */
+@media (min-width: 50em) {
+   .grid-col-span {
+      grid-column: span 2;
+   }
+   body {
+      grid-template-columns: repeat(4, 1fr);
+   }
+   .section-kira {
+      grid-column-start: 4;
+      grid-row-start: 1;
+      grid-row-end: 3;
+   }
+}

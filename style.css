@@ -5,10 +5,11 @@
    box-sizing: border-box;
 }
 body {
+   font-family: "Barlow Semi Condensed", serif;
    background-color: hsl(0, 0%, 81%);
    display: grid;
    /* grid-template-columns: repeat(4, 1fr); */
-   gap: 10px;
+   gap: 25px;
    padding-block: 2rem;
    width: min(95%, 70rem);
    margin-inline: auto;
@@ -20,6 +21,7 @@ body {
 /* Section */
 section {
    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 section img {
    width: 40px;
